@@ -10,6 +10,8 @@ En este repositorio, se presenta el sitio web realizado durante el curso de prog
 - Definición de la problemática que eligieron abordar
 - Relación con los *Objetivos de Desarrollo Sostenible (ODS)*[^1]
 - Explicación de la solución tecnológica que están desarrollando
+
+
 > [!TIP]
 > Aprovechen los [formatos del README](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) para escribir diferentes secciones
 
