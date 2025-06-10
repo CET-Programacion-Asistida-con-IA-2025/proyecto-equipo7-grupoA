@@ -41,6 +41,7 @@ Blogs con consejos prácticos
 Ofrecer una plataforma amigable y educativa que actúe como puente entre la escuela secundaria y la vida adulta, ayudando a los jóvenes a tomar decisiones más informadas y a adquirir habilidades esenciales para su desarrollo personal y profesional.
 
 ODS:
+
 ODS3 Educación de calidad
 
 
