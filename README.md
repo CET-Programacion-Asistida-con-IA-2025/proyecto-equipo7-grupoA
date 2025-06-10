@@ -10,6 +10,46 @@ En este repositorio, se presenta el sitio web realizado durante el curso de prog
 - Definición de la problemática que eligieron abordar
 - Relación con los *Objetivos de Desarrollo Sostenible (ODS)*[^1]
 - Explicación de la solución tecnológica que están desarrollando
+Proyecto: Preparación para la Vida Adulta
+🧩 Problema
+Muchos jóvenes que terminan la educación secundaria enfrentan una gran falta de preparación para afrontar la vida adulta. No cuentan con las herramientas necesarias para tomar decisiones informadas sobre su futuro, su desarrollo profesional ni sus finanzas personales.
+
+🎯 Público Objetivo
+El proyecto está dirigido a jóvenes recién egresados de la secundaria, especialmente aquellos de 18 años o menos, que necesitan orientación para su transición a la vida adulta.
+
+💡 Solución
+Proponemos una página web rápida y sencilla que explique, de forma clara y accesible, los temas fundamentales para comenzar la vida adulta. El sitio servirá como una guía integral para quienes buscan información y orientación en esta nueva etapa.
+
+🔑 Funcionalidades Clave
+📚 Áreas de estudio: Presentación de contenidos sobre distintas áreas como:
+
+Finanzas personales
+
+Economía básica
+
+Programación
+
+Cursos útiles
+
+Blogs con consejos prácticos
+
+🧭 Test vocacional: Herramienta interactiva para ayudar a los jóvenes a identificar sus intereses y habilidades.
+
+🎓 Orientación académica: Información sobre opciones universitarias y otros cursos que pueden tomar después de la secundaria.
+
+🚀 Objetivo
+Ofrecer una plataforma amigable y educativa que actúe como puente entre la escuela secundaria y la vida adulta, ayudando a los jóvenes a tomar decisiones más informadas y a adquirir habilidades esenciales para su desarrollo personal y profesional.
+
+ODS:
+ODS3 Educación de calidad
+
+
+
+
+
+
+
+
 
 
 > [!TIP]
