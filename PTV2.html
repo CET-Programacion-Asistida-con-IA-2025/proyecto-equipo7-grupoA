@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vocacional - Encuentra tu vocación ideal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Test Vocacional</h1>
+            <p class="subtitle">Encuentra tu vocación ideal</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <form id="vocationalForm">
+            <!-- Pregunta 1 -->
+            <div class="question-card active" data-question="1">
+                <h2>1. ¿Qué actividad disfrutas más?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="matematicas"> Resolver problemas matemáticos y desafíos lógicos</label>
+                    <label><input type="radio" name="q1" value="social"> Ayudar a otras personas a sentirse mejor</label>
+                    <label><input type="radio" name="q1" value="tecnologia"> Diseñar cosas o crear arte digital</label>
+                    <label><input type="radio" name="q1" value="ciencias"> Investigar temas nuevos y escribir sobre ellos</label>
+                    <label><input type="radio" name="q1" value="liderazgo"> Liderar proyectos o trabajar en equipo para lograr objetivos</label>
+                    <label><input type="radio" name="q1" value="manual"> Construir o reparar cosas con tus manos</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="question-card" data-question="2">
+                <h2>2. ¿Cómo te describen tus amigos?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="matematicas"> Analítico y observador</label>
+                    <label><input type="radio" name="q2" value="social"> Empático y buen oyente</label>
+                    <label><input type="radio" name="q2" value="tecnologia"> Creativo y original</label>
+                    <label><input type="radio" name="q2" value="ciencias"> Curioso y reflexivo</label>
+                    <label><input type="radio" name="q2" value="liderazgo"> Organizado y motivador</label>
+                    <label><input type="radio" name="q2" value="manual"> Práctico y hábil con las manos</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="question-card" data-question="3">
+                <h2>3. ¿Qué materia te gustaba más en la escuela?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="matematicas"> Matemáticas o física</label>
+                    <label><input type="radio" name="q3" value="social"> Psicología o biología</label>
+                    <label><input type="radio" name="q3" value="tecnologia"> Arte o diseño</label>
+                    <label><input type="radio" name="q3" value="ciencias"> Historia o lengua</label>
+                    <label><input type="radio" name="q3" value="liderazgo"> Economía o liderazgo</label>
+                    <label><input type="radio" name="q3" value="geografia"> Geografía o ciencias naturales</label>
+                    <label><input type="radio" name="q3" value="educacion_fisica"> Educación física o deportes</label>
+                    <label><input type="radio" name="q3" value="manual"> Talleres o educación técnica</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="question-card" data-question="4">
+                <h2>4. ¿Qué tipo de películas o series prefieres?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="matematicas"> Ciencia ficción o misterio</label>
+                    <label><input type="radio" name="q4" value="social"> Historias emocionales o médicas</label>
+                    <label><input type="radio" name="q4" value="tecnologia"> Documentales de arte o moda</label>
+                    <label><input type="radio" name="q4" value="ciencias"> Políticas, periodismo o política</label>
+                    <label><input type="radio" name="q4" value="liderazgo"> Empresas, negocios o estrategia</label>
+                    <label><input type="radio" name="q4" value="geografia"> Documentales de naturaleza o viajes</label>
+                    <label><input type="radio" name="q4" value="educacion_fisica"> Deportes o competencias</label>
+                    <label><input type="radio" name="q4" value="manual"> Programas de construcción o bricolaje</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="question-card" data-question="5">
+                <h2>5. ¿Qué herramientas usarías en un proyecto?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="matematicas"> Una hoja de cálculo o software de programación</label>
+                    <label><input type="radio" name="q5" value="social"> Una guía de primeros auxilios o técnicas de comunicación</label>
+                    <label><input type="radio" name="q5" value="tecnologia"> Un cuaderno de bocetos o tablet para dibujar</label>
+                    <label><input type="radio" name="q5" value="ciencias"> Un blog, una cámara o una grabadora</label>
+                    <label><input type="radio" name="q5" value="liderazgo"> Un planificador o una presentación para motivar al equipo</label>
+                    <label><input type="radio" name="q5" value="geografia"> Mapas, brújula o GPS</label>
+                    <label><input type="radio" name="q5" value="educacion_fisica"> Equipo deportivo o cronómetro</label>
+                    <label><input type="radio" name="q5" value="manual"> Herramientas de carpintería o mecánica</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="question-card" data-question="6">
+                <h2>6. ¿Cuál es tu ambiente de trabajo ideal?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="matematicas"> Oficina con computadoras y datos</label>
+                    <label><input type="radio" name="q6" value="social"> Hospital, clínica o centro comunitario</label>
+                    <label><input type="radio" name="q6" value="tecnologia"> Estudio de arte o agencia creativa</label>
+                    <label><input type="radio" name="q6" value="ciencias"> Redacción de periódico o biblioteca</label>
+                    <label><input type="radio" name="q6" value="liderazgo"> Oficina corporativa o sala de juntas</label>
+                    <label><input type="radio" name="q6" value="geografia"> Al aire libre o laboratorio de investigación</label>
+                    <label><input type="radio" name="q6" value="educacion_fisica"> Gimnasio, campo deportivo o centro de fitness</label>
+                    <label><input type="radio" name="q6" value="manual"> Taller, fábrica o sitio de construcción</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 7 -->
+            <div class="question-card" data-question="7">
+                <h2>7. ¿Qué te motiva más en el trabajo?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="matematicas"> Resolver problemas complejos y crear sistemas eficientes</label>
+                    <label><input type="radio" name="q7" value="social"> Ayudar a mejorar la vida de las personas</label>
+                    <label><input type="radio" name="q7" value="tecnologia"> Expresar creatividad y crear cosas bellas</label>
+                    <label><input type="radio" name="q7" value="ciencias"> Investigar y compartir conocimiento</label>
+                    <label><input type="radio" name="q7" value="liderazgo"> Liderar equipos y lograr objetivos ambiciosos</label>
+                    <label><input type="radio" name="q7" value="geografia"> Explorar y entender el mundo natural</label>
+                    <label><input type="radio" name="q7" value="educacion_fisica"> Promover la salud y el bienestar físico</label>
+                    <label><input type="radio" name="q7" value="manual"> Crear cosas tangibles y funcionales</label>
+                </div>
+            </div>
+
+            <!-- Pregunta 8 -->
+            <div class="question-card" data-question="8">
+                <h2>8. ¿Cuál de estas actividades de fin de semana te atrae más?</h2>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="matematicas"> Resolver sudokus o jugar ajedrez</label>
+                    <label><input type="radio" name="q8" value="social"> Hacer voluntariado o visitar familiares</label>
+                    <label><input type="radio" name="q8" value="tecnologia"> Visitar museos o crear arte</label>
+                    <label><input type="radio" name="q8" value="ciencias"> Leer libros o ver documentales</label>
+                    <label><input type="radio" name="q8" value="liderazgo"> Organizar eventos o reuniones</label>
+                    <label><input type="radio" name="q8" value="geografia"> Hacer senderismo o acampar</label>
+                    <label><input type="radio" name="q8" value="educacion_fisica"> Practicar deportes o ir al gimnasio</label>
+                    <label><input type="radio" name="q8" value="manual"> Reparar cosas o hacer manualidades</label>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button type="button" id="prevBtn" class="nav-btn">Anterior</button>
+                <button type="button" id="nextBtn" class="nav-btn">Siguiente</button>
+                <button type="button" id="submitBtn" class="nav-btn submit-btn" style="display: none;">Ver Resultados</button>
+            </div>
+        </form>
+
+        <div id="results" class="results-section" style="display: none;">
+            <h2>Tus Resultados</h2>
+            <div id="resultContent"></div>
+            <div class="score-section">
+                <h3>Puntuación por Área:</h3>
+                <div id="scoreBreakdown"></div>
+            </div>
+            <button type="button" id="restartBtn" class="nav-btn">Reiniciar Test</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<style>
+/* CSS styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #ecf0f1;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.question-card {
+    display: none;
+    padding: 40px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.question-card.active {
+    display: block;
+}
+
+.question-card h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    color: #2980b9;
+    font-weight: 500;
+}
+
+.options label:hover {
+    background: #e3f2fd;
+    border-color: #3498db;
+    transform: translateX(5px);
+}
+
+.options input[type="radio"] {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    accent-color: #3498db;
+}
+
+.options label:has(input:checked) {
+    background: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.nav-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.submit-btn:hover {
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+.results-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.results-section h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.result-card {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.result-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.result-card p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.score-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.score-section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.score-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.score-bar {
+    flex: 1;
+    height: 20px;
+    background: #ecf0f1;
+    margin: 0 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    transition: width 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .question-card {
+        padding: 20px;
+    }
+    
+    .navigation {
+        padding: 15px 20px;
+    }
+    
+    .nav-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+</style>
+
+<script>
+// JavaScript script.js
+class VocationalTest {
+    constructor() {
+        this.currentQuestion = 1;
+        this.totalQuestions = 8;
+        this.answers = {};
+        this.scores = {
+            matematicas: 0,
+            social: 0,
+            tecnologia: 0,
+            ciencias: 0,
+            liderazgo: 0,
+            geografia: 0,
+            educacion_fisica: 0,
+            manual: 0
+        };
+
+        this.careers = {
+            matematicas: {
+                title: "Área de Matemáticas y Ciencias Exactas",
+                description: "Te inclinas hacia carreras que requieren pensamiento lógico, análisis de datos y resolución de problemas complejos.",
+                careers: ["Ingeniería", "Matemáticas", "Física", "Estadística", "Ciencias de la Computación", "Actuaría", "Arquitectura"]
+            },
+            social: {
+                title: "Área de Ciencias Sociales y Salud",
+                description: "Tu vocación está en ayudar a otros, trabajar con personas y contribuir al bienestar social.",
+                careers: ["Medicina", "Psicología", "Trabajo Social", "Enfermería", "Sociología", "Antropología", "Terapia Ocupacional"]
+            },
+            tecnologia: {
+                title: "Área de Arte y Diseño",
+                description: "Tienes una fuerte inclinación hacia la creatividad, el diseño y la expresión artística.",
+                careers: ["Diseño Gráfico", "Bellas Artes", "Diseño Industrial", "Arquitectura", "Diseño de Moda", "Artes Visuales", "Multimedia"]
+            },
+            ciencias: {
+                title: "Área de Comunicación y Letras",
+                description: "Te atrae la investigación, la escritura y la comunicación de ideas.",
+                careers: ["Periodismo", "Literatura", "Comunicación Social", "Historia", "Filosofía", "Bibliotecología", "Traducción"]
+            },
+            liderazgo: {
+                title: "Área de Administración y Negocios",
+                description: "Tienes habilidades para liderar, organizar y gestionar recursos y equipos.",
+                careers: ["Administración de Empresas", "Economía", "Contaduría", "Marketing", "Recursos Humanos", "Finanzas", "Derecho"]
+            },
+            geografia: {
+                title: "Área de Geografía y Ciencias Naturales",
+                description: "Te fascina el mundo natural, el medio ambiente y la exploración.",
+                careers: ["Geografía", "Biología", "Geología", "Ciencias Ambientales", "Turismo", "Meteorología", "Oceanografía"]
+            },
+            educacion_fisica: {
+                title: "Área de Educación Física y Deportes",
+                description: "Tienes pasión por el deporte, la actividad física y promover estilos de vida saludables.",
+                careers: ["Educación Física", "Fisioterapia", "Entrenamiento Deportivo", "Kinesiología", "Recreación", "Nutrición Deportiva", "Medicina Deportiva"]
+            },
+            manual: {
+                title: "Área de Trabajo Manual y Técnico",
+                description: "Disfrutas trabajar con tus manos, crear objetos tangibles y resolver problemas prácticos.",
+                careers: ["Ingeniería Mecánica", "Carpintería", "Electricidad", "Soldadura", "Mecánica Automotriz", "Construcción", "Artesanía"]
+            }
+        };
+
+        this.init();
+    }
+
+    init() {
+        this.updateProgress();
+        this.bindEvents();
+    }
+
+    bindEvents() {
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const restartBtn = document.getElementById('restartBtn');
+
+        prevBtn.addEventListener('click', () => this.previousQuestion());
+        nextBtn.addEventListener('click', () => this.nextQuestion());
+        submitBtn.addEventListener('click', () => this.showResults());
+        restartBtn.addEventListener('click', () => this.restart());
+
+        // Handle radio button changes
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                this.answers[e.target.name] = e.target.value;
+                this.updateNavigationButtons();
+            });
+        });
+    }
+
+    updateProgress() {
+        const progress = (this.currentQuestion / this.totalQuestions) * 100;
+        document.getElementById('progressFill').style.width = progress + '%';
+    }
+
+    updateNavigationButtons() {
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+
+        prevBtn.disabled = this.currentQuestion === 1;
+        
+        if (this.currentQuestion === this.totalQuestions) {
+            nextBtn.style.display = 'none';
+            submitBtn.style.display = 'block';
+            submitBtn.disabled = !this.answers[`q${this.currentQuestion}`];
+        } else {
+            nextBtn.style.display = 'block';
+            submitBtn.style.display = 'none';
+            nextBtn.disabled = !this.answers[`q${this.currentQuestion}`];
+        }
+    }
+
+    nextQuestion() {
+        if (this.currentQuestion < this.totalQuestions && this.answers[`q${this.currentQuestion}`]) {
+            this.hideCurrentQuestion();
+            this.currentQuestion++;
+            this.showCurrentQuestion();
+            this.updateProgress();
+            this.updateNavigationButtons();
+        }
+    }
+
+    previousQuestion() {
+        if (this.currentQuestion > 1) {
+            this.hideCurrentQuestion();
+            this.currentQuestion--;
+            this.showCurrentQuestion();
+            this.updateProgress();
+            this.updateNavigationButtons();
+        }
+    }
+
+    hideCurrentQuestion() {
+        const currentCard = document.querySelector(`[data-question="${this.currentQuestion}"]`);
+        currentCard.classList.remove('active');
+    }
+
+    showCurrentQuestion() {
+        const currentCard = document.querySelector(`[data-question="${this.currentQuestion}"]`);
+        currentCard.classList.add('active');
+    }
+
+    calculateScores() {
+        // Reset scores
+        Object.keys(this.scores).forEach(key => {
+            this.scores[key] = 0;
+        });
+
+        // Calculate scores based on answers
+        Object.values(this.answers).forEach(answer => {
+            if (this.scores.hasOwnProperty(answer)) {
+                this.scores[answer]++;
+            }
+        });
+    }
+
+    showResults() {
+        this.calculateScores();
+        
+        // Find the highest scoring area
+        const maxScore = Math.max(...Object.values(this.scores));
+        const topArea = Object.keys(this.scores).find(key => this.scores[key] === maxScore);
+        
+        // Hide form and show results
+        document.getElementById('vocationalForm').style.display = 'none';
+        document.getElementById('results').style.display = 'block';
+        
+        // Display main result
+        const resultContent = document.getElementById('resultContent');
+        const careerInfo = this.careers[topArea];
+        
+        resultContent.innerHTML = `
+            <div class="result-card">
+                <h3>${careerInfo.title}</h3>
+                <p><strong>Descripción:</strong> ${careerInfo.description}</p>
+                <p><strong>Carreras sugeridas:</strong> ${careerInfo.careers.join(', ')}</p>
+            </div>
+        `;
+        
+        // Display score breakdown
+        this.displayScoreBreakdown();
+    }
+
+    displayScoreBreakdown() {
+        const scoreBreakdown = document.getElementById('scoreBreakdown');
+        const areaNames = {
+            matematicas: 'Matemáticas y Ciencias Exactas',
+            social: 'Ciencias Sociales y Salud',
+            tecnologia: 'Arte y Diseño',
+            ciencias: 'Comunicación y Letras',
+            liderazgo: 'Administración y Negocios',
+            geografia: 'Geografía y Ciencias Naturales',
+            educacion_fisica: 'Educación Física y Deportes',
+            manual: 'Trabajo Manual y Técnico'
+        };
+
+        let html = '';
+        Object.keys(this.scores).forEach(area => {
+            const score = this.scores[area];
+            const percentage = (score / this.totalQuestions) * 100;
+            
+            html += `
+                <div class="score-item">
+                    <span>${areaNames[area]}</span>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: ${percentage}%"></div>
+                    </div>
+                    <span>${score}/${this.totalQuestions}</span>
+                </div>
+            `;
+        });
+        
+        scoreBreakdown.innerHTML = html;
+    }
+
+    restart() {
+        this.currentQuestion = 1;
+        this.answers = {};
+        this.scores = {
+            matematicas: 0,
+            social: 0,
+            tecnologia: 0,
+            ciencias: 0,
+            liderazgo: 0,
+            geografia: 0,
+            educacion_fisica: 0,
+            manual: 0
+        };
+        
+        // Reset form
+        document.getElementById('vocationalForm').reset();
+        
+        // Hide all questions
+        document.querySelectorAll('.question-card').forEach(card => {
+            card.classList.remove('active');
+        });
+        
+        // Show first question
+        document.querySelector('[data-question="1"]').classList.add('active');
+        
+        // Show form and hide results
+        document.getElementById('vocationalForm').style.display = 'block';
+        document.getElementById('results').style.display = 'none';
+        
+        this.updateProgress();
+        this.updateNavigationButtons();
+    }
+}
+
+// Initialize the test when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    new VocationalTest();
+});
+</script>
