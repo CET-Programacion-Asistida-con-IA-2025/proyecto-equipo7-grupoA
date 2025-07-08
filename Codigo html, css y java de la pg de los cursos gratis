@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cursos Gratuitos Online</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #c2e9fb, #f9f3ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(120deg, #eeaeca, #94bbe9);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    #courses-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card a {
+      text-decoration: none;
+      color: #2a2a7b;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .course-card button {
+      background-color: #2a2a7b;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    .course-card button:hover {
+      background-color: #1c1c5c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CURSOS GRATUITOS</h1>
+    <p>"Holii, este espacio es para vos. Elegí los cursos que más te gusten y empezá a aprender sin pagar un peso </p>
+  </header>
+
+  <main>
+    <div id="courses-container"></div>
+  </main>
+
+  <footer>
+    
+  </footer>
+
+  <script>
+    const courses = [
+      {
+        title: "Chicas en Tecnología",
+        url: "https://chicasentecnologia.org",
+        description: "Formación gratuita para chicas de 13‑23 años en programación y liderazgo digital."
+      },
+      {
+        title: "Buenos Aires Aprende (Gobierno de CABA)",
+        url: "https://buenosaires.gob.ar/educacion/cursos",
+        description: "Cursos gratuitos de programación, diseño, marketing y más para jóvenes y adultos."
+      },
+      {
+        title: "Digitalers (Telecom + CESSI)",
+        url: "https://institucional.telecom.com.ar/digitalers",
+        description: "Cursos online gratis de Java, Python, React, UX/UI, IA y más. ¡Sin requisitos previos!"
+      },
+      {
+        title: "freeCodeCamp",
+        url: "https://www.freecodecamp.org/",
+        description: "Plataforma global con cursos gratuitos de desarrollo web, JavaScript, APIs, bases de datos y más."
+      },
+      {
+        title: "W3Schools",
+        url: "https://www.w3schools.com",
+        description: "Tutoriales interactivos gratuitos de HTML, CSS, JavaScript y más. Ideal para principiantes."
+      },
+      {
+        title: "Saylor Academy",
+        url: "https://www.saylor.org",
+        description: "Cursos universitarios gratuitos con opción de certificados. Desde economía hasta informática."
+      },
+    
+    ];
+
+    function loadCourses() {
+      const container = document.getElementById("courses-container");
+      courses.forEach(course => {
+        const card = document.createElement("div");
+        card.className = "course-card";
+
+        const link = document.createElement("a");
+        link.href = course.url;
+        link.target = "_blank";
+        link.textContent = course.title;
+
+        const description = document.createElement("p");
+        description.textContent = course.description;
+
+        const button = document.createElement("button");
+        button.textContent = "Abrir curso";
+        button.onclick = () => window.open(course.url, "_blank");
+
+        card.appendChild(link);
+        card.appendChild(description);
+        card.appendChild(button);
+
+        container.appendChild(card);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", loadCourses);
+  </script>
+</body>
+</html>
