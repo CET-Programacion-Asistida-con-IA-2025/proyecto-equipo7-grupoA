@@ -22,7 +22,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 const routes = {
     'ESI': 'ESI.html',
     'Economía': 'Economía.html',  
-    'Cursos': 'ESI.html',
+    'Cursos': 'cursosgratis.html',
     'Test Vocacional': 'PTV2.html',
     'Valoraciones': 'ESI.html'
 };
