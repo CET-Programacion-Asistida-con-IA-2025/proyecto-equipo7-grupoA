@@ -10,6 +10,54 @@ body {
     min-height: 100vh;
     padding: 20px;
     line-height: 1.6;
+    .nav-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.top-navigation {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-item.active span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 1px;
+}
+
+
 }
 .container {
     max-width: 1200px;

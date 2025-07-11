@@ -14,6 +14,49 @@
       background: linear-gradient(135deg, #c2e9fb, #f9f3ff);
       color: #333;
     }
+    .top-navigation {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    gap: 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item span {
+    color: #0d0e50;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-item.active span {
+    color: #0d0e50;
+    font-weight: 600;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 1px;
+}
+
+
 
     header {
       background: linear-gradient(120deg, #eeaeca, #94bbe9);

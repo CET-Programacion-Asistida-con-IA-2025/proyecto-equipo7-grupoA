@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel de Imágenes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .carousel-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+        .carousel-indicators button {
+            background-color: #007bff;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Galería de Imágenes</h1>
+        
+        <div class="carousel-container">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <!-- Contenido del carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="c:\Users\maiam\Downloads\CETPROGRAMACIÓN\cursos.jpg" class="d-block w-100" alt="ESI Programación">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>ESI Programación</h5>
+                            <p>Aprende programación con los mejores recursos educativos.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src= "c:\Users\maiam\Downloads\CETPROGRAMACIÓN\esi.jpg" class="d-block w-100" alt="Trabajo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Oportunidades de Trabajo</h5>
+                            <p>Descubre las mejores oportunidades laborales en tecnología.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src= "c:\Users\maiam\Downloads\CETPROGRAMACIÓN\trabajo.jpg"  class= "d-block w-100" alt="Cursos">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cursos Especializados</h5>
+                            <p>Amplía tus conocimientos con nuestros cursos especializados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles de navegación -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Educación</h5>
+                        <p class="card-text">Recursos educativos de calidad para tu formación profesional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Empleo</h5>
+                        <p class="card-text">Conecta con las mejores oportunidades del mercado laboral.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Capacitación</h5>
+                        <p class="card-text">Cursos especializados para mejorar tus habilidades técnicas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Opcional: Configuración adicional del carousel
+        const carousel = document.querySelector('#carouselExample');
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 4000, // Cambio automático cada 4 segundos
+            wrap: true,     // Continúa en bucle infinito
+            pause: 'hover'  // Pausa al pasar el mouse
+        });
+    </script>
+</body>
+</html>

@@ -11,7 +11,8 @@ body {
     padding: 20px;
     line-height: 1.6;
 }
-.top-navigation {
+
+    .top-navigation {
     max-width: 1200px;
     margin: 0 auto 30px auto;
     display: flex;
@@ -49,11 +50,9 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, #2b115c 0%, #12186c 100%);
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
     border-radius: 1px;
 }
-
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
