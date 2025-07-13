@@ -1,25 +1,6 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const nombre = document.getElementById('nombre').value;
-    const comentario = document.getElementById('comentario').value;
-    
-    if (nombre && comentario) {
-        // Simular envío del formulario
-        document.getElementById('successMessage').style.display = 'block';
-        
-        // Limpiar el formulario
-        document.getElementById('nombre').value = '';
-        document.getElementById('comentario').value = '';
-        
-        // Ocultar mensaje después de 3 segundos
-        setTimeout(function() {
-            document.getElementById('successMessage').style.display = 'none';
-        }, 3000);
-    }
-});
 // Configuración de rutas
 const routes = {
+	'Inicio': 'index.html',
     'ESI': 'ESI.html',
     'Economía': 'Economía.html',  
     'Cursos': 'cursosgratis.html',
@@ -73,22 +54,34 @@ function setActiveNavItem() {
     // Limpiar todas las clases activas
     navItems.forEach(item => item.classList.remove('active'));
     
-    // Determinar qué elemento debe estar activo basado en la URL
-    if (currentPage.includes('esi') || currentPage.includes('ESI')) {
-        // Si estamos en la página de ESI, marcar "Servicios" como activo
-        const serviciosItem = Array.from(navItems).find(item => 
-            item.querySelector('span').textContent === 'Servicios'
-        );
-        if (serviciosItem) {
-            serviciosItem.classList.add('active');
+    // Obtener el nombre del archivo actual
+    const currentFileName = currentPage.split('/').pop().replace('.html', '');
+    
+    // Recorrer todos los elementos de navegación
+    navItems.forEach(item => {
+        const navText = item.querySelector('span').textContent;
+        
+        // Verificar si existe una ruta para este elemento de navegación
+        if (routes[navText]) {
+            const routeFileName = routes[navText].replace('.html', '');
+            
+            // Si coincide con la página actual, marcar como activo
+            if (currentFileName === routeFileName || 
+                (currentFileName === '' && routeFileName === 'index') ||
+                (currentFileName === 'index' && routeFileName === 'index')) {
+                item.classList.add('active');
+            }
         }
-    } else {
-        // Si estamos en la página principal, marcar "Trabajo" como activo
-        const trabajoItem = Array.from(navItems).find(item => 
-            item.querySelector('span').textContent === 'Trabajo'
+    });
+    
+    // Caso especial: si estamos en la raíz y no hay ningún elemento activo, activar "Inicio"
+    const hasActive = document.querySelector('.nav-item.active');
+    if (!hasActive && (currentFileName === '' || currentFileName === 'index')) {
+        const inicioItem = Array.from(navItems).find(item => 
+            item.querySelector('span').textContent === 'Inicio'
         );
-        if (trabajoItem) {
-            trabajoItem.classList.add('active');
+        if (inicioItem) {
+            inicioItem.classList.add('active');
         }
     }
 }
@@ -97,5 +90,34 @@ function setActiveNavItem() {
 document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     setActiveNavItem();
+
+    // Extra: para que solo busque el "contact form" en la pagina que corresponde, y no de error en otras paginas donde no existe
+    const paginaActual = window.location.pathname;
+    // Obtener el nombre del archivo actual
+    const currentFileName = paginaActual.split('/').pop().replace('.html', '');
+	
+	if (currentFileName == "index") {
+        // esta parte es la que ya habian puesto ustedes:
+		document.getElementById('contactForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			
+			const nombre = document.getElementById('nombre').value;
+			const comentario = document.getElementById('comentario').value;
+			
+			if (nombre && comentario) {
+				// Simular envío del formulario
+				document.getElementById('successMessage').style.display = 'block';
+				
+				// Limpiar el formulario
+				document.getElementById('nombre').value = '';
+				document.getElementById('comentario').value = '';
+				
+				// Ocultar mensaje después de 3 segundos
+				setTimeout(function() {
+					document.getElementById('successMessage').style.display = 'none';
+				}, 3000);
+			}
+		});
+	}
 });
 
